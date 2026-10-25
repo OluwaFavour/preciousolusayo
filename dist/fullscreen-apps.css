@@ -1,0 +1,176 @@
+/* Desktop apps occupy the browser; reading columns remain comfortably sized. */
+@media (min-width: 721px) {
+  .native-app {
+    --desktop-column: 800px;
+    --desktop-gutter: max(32px, calc((100% - var(--desktop-column)) / 2));
+  }
+
+  .p-app {
+    --desktop-column: 840px;
+    --desktop-gutter: max(32px, calc((100% - var(--desktop-column)) / 2));
+  }
+
+  .native-app > .na-scroll,
+  .p-app > .p-scroll {
+    width: 100%;
+    padding-left: var(--desktop-gutter);
+    padding-right: var(--desktop-gutter);
+    padding-bottom: 42px;
+  }
+
+  .native-app > .na-toolbar,
+  .native-app > .na-large-header,
+  .p-app > .p-nav {
+    padding-left: var(--desktop-gutter);
+    padding-right: var(--desktop-gutter);
+  }
+
+  .native-app > .na-large-header { padding-top: 24px; padding-bottom: 24px; }
+  .native-app > .na-toolbar { min-height: 66px; }
+  .p-app > .p-nav { height: 66px; padding-top: 10px; padding-bottom: 12px; }
+  .p-app > .p-scroll { padding-top: 82px; scroll-padding-top: 82px; }
+  .p-large-title { margin-bottom: 22px !important; }
+  .p-search { max-width: 640px; }
+  .p-section-heading { margin-top: 26px; }
+  .p-footnote { font-size: 12px; }
+  .p-feature-link strong { font-size: 15px; }
+  .p-feature-link small { font-size: 12px; }
+
+  /* Contacts, Settings and Phone keep their familiar grouped lists. */
+  .na-contacts { --desktop-column: 760px; }
+  .na-contacts .na-contact-hero { padding-top: 16px; padding-bottom: 26px; }
+  .native-app .na-contact-actions { gap: 20px; margin-bottom: 28px; }
+  .na-contacts .na-prose { padding: 22px; line-height: 1.65; }
+  .na-contacts .na-experience { padding-top: 19px; padding-bottom: 19px; }
+  .na-settings { --desktop-column: 760px; }
+  .na-phone { --desktop-column: 760px; }
+  .na-phone .na-phone-contact { padding-top: 20px; }
+  .na-phone .na-call-button { width: min(100%, 400px); margin-left: auto; margin-right: auto; }
+  .na-phone > .na-scroll { padding-bottom: 112px; }
+  .native-app .na-bottom-tabs {
+    left: 50%;
+    right: auto;
+    bottom: 20px;
+    width: min(calc(100% - 64px), 480px);
+    transform: translateX(-50%);
+  }
+
+  /* Calendar grows as a calendar, without stretching date targets. */
+  .na-calendar { --desktop-column: 760px; }
+  .na-calendar .na-month-nav { margin-top: 8px; margin-bottom: 16px; }
+  .na-calendar .na-calendar-grid { grid-auto-rows: 54px; }
+  .na-calendar .na-calendar-day { width: 42px; height: 42px; }
+  .na-calendar .na-meeting-heading { margin-top: 24px; }
+
+  /* Conversation and composer share the same readable column. */
+  .na-messages { --desktop-column: 760px; }
+  .na-messages .na-conversation-header,
+  .na-messages .na-message-compose {
+    left: 50%;
+    right: auto;
+    width: min(calc(100% - 64px), 760px);
+    transform: translateX(-50%);
+  }
+  .na-messages .na-conversation-header { top: 14px; }
+  .na-messages > .na-message-scroll { padding-top: 96px; padding-bottom: 125px; }
+  .na-messages .na-message-bubble { max-width: min(80%, 560px); }
+  .na-messages .na-conversation-topics > button { max-width: 80%; }
+  .na-messages .na-message-compose { bottom: 36px; }
+  .na-messages .na-compose-caption { bottom: 12px; }
+
+  /* Mail remains one continuous compose surface. */
+  .na-mail .na-mail-form { width: min(calc(100% - 64px), 900px); margin-inline: auto; }
+  .na-mail .na-mail-header { min-height: 72px; padding-left: 0; padding-right: 0; }
+  .na-mail .na-mail-fields { padding-left: 0; }
+  .na-mail .na-mail-field { padding-right: 0; min-height: 56px; }
+  .na-mail .na-mail-form textarea { padding: 24px 0; line-height: 1.65; }
+  .na-mail .na-mail-help { padding-bottom: 24px; }
+  .na-mail .na-mail-help .na-primary-button { max-width: 400px; }
+
+  /* Safari's page stays spacious; its compact controls stay compact. */
+  .na-safari { --desktop-column: 840px; }
+  .na-safari > .na-scroll { padding-bottom: 120px; }
+  .na-safari .na-safari-intro { padding-top: 48px; padding-bottom: 30px; }
+  .na-safari .na-favorite-grid { max-width: 560px; gap: 24px; }
+  .na-safari .na-favorite-grid > a,
+  .na-safari .na-favorite-grid > button { min-height: 94px; }
+  .na-safari .na-reading-list { margin-top: 35px; }
+  .na-safari .na-reading-list > button { padding: 18px; }
+  .na-safari .na-safari-chrome {
+    left: 50%;
+    right: auto;
+    bottom: 22px;
+    width: min(calc(100% - 64px), 600px);
+    transform: translateX(-50%);
+  }
+  .na-safari .na-resume-header { padding-top: 30px; }
+  .na-safari .na-pdf-preview { height: min(960px, 75dvh); min-height: 500px; }
+
+  /* Project reading views retain their original hierarchy and accents. */
+  .p-files > .p-scroll { padding-bottom: 120px; }
+  .p-tabbar { bottom: 22px; max-width: 360px; }
+  .p-project > .p-scroll { padding-left: 0; padding-right: 0; padding-top: 66px; }
+  .p-project-hero {
+    padding: 26px var(--desktop-gutter) 30px;
+  }
+  .p-project-status { right: var(--desktop-gutter); top: 40px; }
+  .p-project-content {
+    width: min(calc(100% - 64px), 840px);
+    margin-inline: auto;
+    padding: 0;
+  }
+  .p-project > .p-scroll > .p-segmented {
+    width: min(calc(100% - 64px), 840px);
+    margin: 0 auto 24px;
+    top: 70px;
+  }
+  .p-segmented button { font-size: 13px; }
+  .p-prose p, .p-check-list li { font-size: 15px; line-height: 1.65; }
+  .p-card { padding: 23px; }
+  .p-stat-strip { padding-top: 22px; padding-bottom: 25px; }
+  .p-stat-strip span { font-size: 12px; }
+  .p-workflow { font-size: 13px; padding: 16px; }
+  .p-notes > .p-scroll { padding-bottom: 48px; }
+  .p-note-open { --desktop-column: 760px; }
+  .p-note-open > .p-scroll { padding-top: 88px; }
+  .p-note-document h1 { font-size: 36px; line-height: 1.15; }
+  .p-note-document p, .p-note-document li { font-size: 17px; line-height: 1.7; }
+  .p-note-document blockquote { font-size: 22px; }
+  .p-note-date { margin-bottom: 32px !important; font-size: 12px; }
+  .p-note-row { padding-top: 18px !important; padding-bottom: 18px !important; }
+  .p-note-row p { font-size: 14px; }
+  .p-health .p-metric-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .p-health .p-metric { min-height: 134px; }
+  .p-health .p-highlight { padding: 24px; }
+  .p-health .p-highlight p { font-size: 14px; }
+  .p-health .p-highlight button { font-size: 13px; }
+  .p-reminders { --desktop-column: 800px; }
+  .p-reminders .p-checklist-item { padding-top: 20px; padding-bottom: 20px; }
+  .p-reminders .p-checklist-item strong { font-size: 16px; }
+  .p-reminders .p-checklist-item small { font-size: 13px; }
+
+  /* The library uses the available width; individual slides remain legible. */
+  .p-photos { --desktop-column: 1160px; }
+  .p-photo-library > .p-scroll,
+  .p-photo-collections > .p-scroll { padding-bottom: 125px; }
+  .p-photos .p-gallery-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .p-photo-library .p-photo-library-grid { margin: 26px 0 0; gap: 3px; }
+  .p-photo-library-grid span { font-size: 13px; padding: 30px 14px 14px; }
+  .p-photo-collections .p-gallery-grid { gap: 24px 18px; }
+  .p-photo-collections .p-gallery-grid span { font-size: 14px; margin-top: 9px; }
+  .p-photo-collections .p-album-cover { height: 300px; margin-bottom: 30px; }
+  .p-photos .p-feature-link { max-width: 840px; margin-inline: auto; }
+  .p-photos .p-footnote { max-width: 840px; margin-left: auto !important; margin-right: auto !important; }
+  .p-photo-open > .p-scroll { padding-top: 82px; padding-bottom: 110px; }
+  .p-photo-detail { width: 100%; max-width: 1040px; margin-inline: auto; }
+  .p-photo-detail img { max-height: 62dvh; object-fit: contain; }
+  .p-photo-detail figcaption { max-width: 800px; margin-inline: auto; padding: 26px 0 12px; }
+  .p-photo-detail h1 { font-size: 28px; }
+  .p-photo-detail p { font-size: 15px; }
+  .p-photo-detail .p-eyebrow { font-size: 10px; }
+  .p-photo-filmstrip { padding-top: 16px; padding-bottom: 22px; gap: 8px; }
+  .p-photo-filmstrip button { width: 52px; flex-basis: 52px; height: 50px; }
+  .p-photo-filmstrip button.is-selected { width: 82px; flex-basis: 82px; }
+  .p-photo-download { max-width: 800px; width: 100%; margin-inline: auto; padding: 8px 0 16px; }
+  .p-gallery-navigation { bottom: 22px; }
+}

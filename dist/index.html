@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f4f2ed" />
+    <meta name="description" content="Step inside Precious Olusayo's portfolio. Explore real project decisions, product launches, and cross-functional delivery through an interactive iPhone experience." />
+    <meta property="og:title" content="Precious Olusayo | Technical Project Manager" />
+    <meta property="og:description" content="A few good projects. The decisions behind them. Explore my interactive portfolio." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://precious-olusayo-iphone.nuttyberry16384.chatgpt.site" />
+    <title>Precious Olusayo · Project Manager</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href="/assets/wallpaper-lock-light.jpg" as="image" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/apps.css" />
+    <link rel="stylesheet" href="/project-apps.css" />
+    <link rel="stylesheet" href="/liquid-glass.css" />
+    <link rel="stylesheet" href="/control-center.css" />
+    <link rel="stylesheet" href="/fullscreen.css" />
+    <link rel="stylesheet" href="/fullscreen-apps.css" />
+    <link rel="stylesheet" href="/portrait.css" />
+    <link rel="stylesheet" href="/trimly-documents.css" />
+    <script type="module" src="/js/main.js"></script>
+  </head>
+  <body>
+    <svg class="material-filters" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs><filter id="liquid-refraction" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency="0.008 0.014" numOctaves="1" seed="7" result="glass-map"/><feGaussianBlur in="SourceGraphic" stdDeviation="0.3" result="glass-backdrop"/><feDisplacementMap in="glass-backdrop" in2="glass-map" scale="9" xChannelSelector="R" yChannelSelector="G"/></filter></defs></svg>
+    <main class="portfolio-stage">
+          <div class="screen" id="screen" data-state="locked">
+            <div class="home-wallpaper" aria-hidden="true"></div>
+
+            <section class="home-screen" id="home-screen" aria-label="Portfolio home screen" tabindex="-1" inert>
+              <div class="home-widgets">
+                <button class="widget profile-widget" type="button" data-open="contacts" aria-label="About Precious Olusayo">
+                  <div class="widget-header"><span class="mini-portrait portrait" aria-hidden="true"><img src="/assets/profile-photo.jpg" alt="" width="1365" height="2048" decoding="async"></span><span class="widget-location">IBADAN, NG</span></div>
+                  <div class="profile-widget-name">Precious<br>Olusayo.</div>
+                  <div class="profile-widget-caption"><span class="small-dot"></span>Project Manager</div>
+                </button>
+                <button class="widget results-widget" type="button" data-open="health" aria-label="Explore reported project results">
+                  <div class="widget-eyebrow"><span class="results-widget-icon" id="results-widget-icon"></span>TRIMLY</div>
+                  <span class="widget-big-number">210<span>↗</span></span>
+                  <span class="widget-metric-label">completed bookings</span>
+                  <span class="widget-metric-period">First 3 months</span>
+                  <span class="widget-results-link">EXPLORE THE RESULTS ↗</span>
+                </button>
+              </div>
+              <nav class="app-grid" id="app-grid" aria-label="Portfolio applications"></nav>
+              <button class="notes-widget" type="button" data-open="notes" aria-label="Read my approach to project delivery">
+                <div class="notes-widget-heading"><span id="notes-widget-icon"></span>PINNED NOTE<span class="notes-widget-count">01</span></div>
+                <p>Good delivery starts<br>with clear decisions.</p>
+                <span class="notes-widget-footer">A few notes on how I work<span aria-hidden="true">↗</span></span>
+              </button>
+              <button class="spotlight-button glass" id="spotlight-button" type="button" aria-label="Search portfolio"><span id="search-glyph"></span>Search</button>
+              <nav class="dock glass" id="dock" aria-label="Quick contact and professional links"></nav>
+            </section>
+
+            <section class="lock-screen" id="lock-screen" aria-label="Locked portfolio. Swipe up, drag up, or press the up arrow to unlock." tabindex="0">
+              <div class="lock-clock-area">
+                <span class="lock-status-icon" id="lock-status-icon" aria-hidden="true"></span>
+                <p class="lock-date" id="lock-date"></p>
+                <div class="lock-time" id="lock-time" aria-label="Current time"></div>
+              </div>
+              <div class="lock-personal-label"><span>PRECIOUS OLUSAYO</span><span class="label-line"></span><span>PROJECT MANAGER</span></div>
+              <div class="lock-notifications">
+                <div class="lock-notification glass">
+                  <span class="notification-app-icon" id="notification-icon" aria-hidden="true"></span>
+                  <div class="notification-copy"><div class="notification-meta"><span>MY PORTFOLIO</span><span>now</span></div><h2>Hello, I'm Precious.</h2><p>Projects, decisions, and the work behind<br>the results. Make yourself at home.</p></div>
+                </div>
+              </div>
+              <div class="lock-shortcuts">
+                <button class="lock-shortcut glass" type="button" data-lock-open="mail" aria-label="Unlock and contact Precious" title="Contact Precious" id="lock-mail"></button>
+                <button class="lock-shortcut glass" type="button" data-lock-open="files" aria-label="Unlock and explore projects" title="Explore projects" id="lock-files"></button>
+              </div>
+              <button class="unlock-prompt" id="unlock-button" type="button" aria-label="Unlock portfolio"><span class="swipe-chevron" id="swipe-chevron"></span><span>Swipe up to unlock</span></button>
+            </section>
+
+            <section class="app-window" id="app-window" aria-label="Portfolio application" hidden>
+              <div class="app-host" id="app-host"></div>
+            </section>
+
+            <div class="status-bar" id="status-bar">
+              <span class="status-time" id="status-time">Portfolio</span>
+              <button class="status-indicators" id="control-button" type="button" aria-label="Open Control Centre" title="Control Centre"><span id="signal-icon"></span><span id="wifi-icon"></span><span class="battery-indicator"><span></span></span></button>
+            </div>
+
+            <section class="spotlight-overlay" id="spotlight-overlay" aria-label="Search portfolio" hidden>
+              <div class="spotlight-top"><label class="spotlight-input-wrap"><span id="spotlight-search-icon"></span><input id="spotlight-input" type="search" autocomplete="off" placeholder="Search projects, skills, apps" aria-label="Search portfolio" /></label><button type="button" id="spotlight-cancel">Cancel</button></div>
+              <div class="spotlight-results" id="spotlight-results"></div>
+            </section>
+
+            <section class="controls-overlay" id="controls-overlay" role="dialog" aria-modal="true" aria-label="Control Centre" hidden></section>
+
+            <div class="phone-toast" id="phone-toast" role="status" aria-live="polite"></div>
+            <button class="home-indicator-button" id="home-indicator" type="button" aria-label="Unlock portfolio"><span></span></button>
+          </div>
+    </main>
+    <noscript><div class="noscript-note"><h1>Precious Olusayo · Technical Project Manager</h1><p>Enable JavaScript to explore this interactive portfolio, or use the links below.</p><a href="/assets/Precious_Olusayo_Resume.pdf">Download resume</a><a href="mailto:originalshayo@gmail.com">Contact Precious</a></div></noscript>
+  </body>
+</html>
