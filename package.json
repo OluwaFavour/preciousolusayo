@@ -5,10 +5,13 @@
   "type": "module",
   "description": "Precious Olusayo's interactive iPhone project management portfolio",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "tsc -p tsconfig.json && cp node_modules/@vercel/analytics/dist/index.mjs dist/js/vercel-analytics.js",
     "check": "tsc -p tsconfig.json --noEmit"
   },
   "devDependencies": {
     "typescript": "7.0.2"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
   }
 }

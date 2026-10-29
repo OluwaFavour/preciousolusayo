@@ -1,7 +1,10 @@
+import { inject } from '@vercel/analytics';
 import { icon, appIcon } from './icons.js';
 import { mountApp } from './apps.js';
 import { createControlCentre } from './control-center.js';
 import type { AppContext, AppDefinition, AppId, Theme } from './types.js';
+
+inject();
 
 const apps: readonly AppDefinition[] = [
   { id: 'files', name: 'Files', subtitle: 'Projects and case studies', color: '#007aff' },

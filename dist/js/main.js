@@ -1,6 +1,8 @@
+import { inject } from '@vercel/analytics';
 import { icon, appIcon } from './icons.js';
 import { mountApp } from './apps.js';
 import { createControlCentre } from './control-center.js';
+inject();
 const apps = [
     { id: 'files', name: 'Files', subtitle: 'Projects and case studies', color: '#007aff' },
     { id: 'notes', name: 'Notes', subtitle: 'How I manage delivery', color: '#eeb827' },
